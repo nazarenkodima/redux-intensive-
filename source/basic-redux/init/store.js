@@ -26,8 +26,8 @@ export const store = preloadedState ?
     createStore(rootReducer, preloadedState, enhancedStore) :
     createStore(rootReducer, enhancedStore);
 
-// store.subscribe(() => {
-//     const state = store.getState();
+store.subscribe(() => {
+    const state = store.getState();
 
-//     localStorage.setItem('gallery', JSON.stringify(state));
-// });
+    localStorage.setItem('gallery', JSON.stringify(state));
+});
