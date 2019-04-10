@@ -1,4 +1,5 @@
 @import '../../theme/palette';
+@import '../../theme/breakpoints.css';
 
 .navigation {
     display: flex;
@@ -99,5 +100,12 @@
             background: #f40009;
             box-shadow: 0 0 2px #f40009;
         }
+    }
+}
+
+@media(--phoneLandscape) {
+    .navigation {
+        background-color: var(--paletteColor24);
+
     }
 }

@@ -10,5 +10,4 @@ import { enhancedStore, sagaMiddleware } from './middleware/core';
 
 export const store = createStore(rootReducer, enhancedStore);
 
-sagaMiddleware.run(rootSaga)
-;
+sagaMiddleware.run(rootSaga);

@@ -9,14 +9,23 @@ import Styles from './styles.m.css';
 import { book } from '../../navigation/book';
 // import { mockedProfile } from '../../instruments/mockedData';
 
+//Actions
+import { authAction } from '../../bus/auth/actions';
+
 const mapStateToProps = (state) => {
     return {
         isAuthenticated: state.auth.get('isAuthenticated'),
         profile:         state.profile,
     };
+
 };
 
-@connect(mapStateToProps)
+const mapsDispatchToProps = {
+    logoutAsync: authAction.logoutAsync,
+
+};
+
+@connect(mapStateToProps, mapsDispatchToProps)
 export default class Nav extends Component {
     // static defaultProps = {
     //     // State
@@ -59,6 +68,7 @@ export default class Nav extends Component {
     };
 
     _logout = () => {
+
         this.props.logoutAsync();
     };
 
