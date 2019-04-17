@@ -7,6 +7,7 @@ import { authAction } from '../../../auth/actions';
 import { uiActions } from '../../../ui/actions';
 import { profileActions } from '../../../profile/actions';
 import { postActions } from '../../../posts/actions';
+import { usersActions } from '../../../users/actions';
 
 export function* logout () {
     try {
@@ -28,6 +29,7 @@ export function* logout () {
 
         yield put(profileActions.clearProfile());
         yield put(postActions.clearPosts());
+        yield put(usersActions.clearUsers());
         yield put(uiActions.stopFetching());
         yield put(authAction.logout());
 

@@ -23,9 +23,9 @@ export const login = {
 
 export const signup = {
     shape: {
-        firstName: 'Mikkel',
-        lastName:  'Beardsgaard',
-        email:     'Mikkel@norway.com',
+        firstName: 'Bjorn',
+        lastName:  'Strom',
+        email:     'snowden@usa.com',
         password:  'lololo',
         invite,
     },

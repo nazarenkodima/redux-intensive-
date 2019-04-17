@@ -40,7 +40,8 @@ export const postsReducer = (state = initialState, action) => {
                 }),
                 'likes',
                 likedPost.get('likes').findIndex((liker) => {
-                    return liker.get('id') === action.payload.liker.get('id');
+
+                    return likedPost.clear(liker);
                 })
             ]);
         }

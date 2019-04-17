@@ -16,6 +16,7 @@ const mapStateToProps = (state) => {
     return {
         isAuthenticated: state.auth.get('isAuthenticated'),
         profile:         state.profile,
+        isOnline:        state.ui.get('isOnline'),
     };
 
 };
