@@ -34,15 +34,13 @@ export const postsReducer = (state = initialState, action) => {
                 return post.get('id') === action.payload.postId;
             });
 
-            return state.deleteIn([
-                state.findIndex((post) => {
-                    return post.get('id') === action.payload.postId;
-                }),
-                'likes',
-                likedPost.get('likes').findIndex((liker) => {
-
-                    return likedPost.clear(liker);
-                })
+            return state.deleteIn([state.findIndex((post) => {
+                return post.get('id') === action.payload.postId;
+            }),
+            'likes',
+            likedPost.get('likes').findIndex((liker) => {
+                return likedPost.clear(liker);
+            })
             ]);
         }
 

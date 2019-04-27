@@ -33,7 +33,6 @@ export const socketActions = {
             }
         });
         socket.on('remove', (event) => {
-            // postId содержит ID удалённого поста.
             const { data, meta } = JSON.parse(event);
 
             if (meta.postId === getState().profile.id) {
