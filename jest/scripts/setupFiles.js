@@ -61,6 +61,32 @@ const newPassword = {
     newPassword: 123456,
 };
 
+const fillUsers = [
+    {
+        id:        'TEST_ID',
+        avatar:    'TEST_AVATAR',
+        firstName: 'Walter',
+        lastName:  'White',
+    },
+    {
+        id:        'TEST_ID2',
+        avatar:    'TEST_AVATAR2',
+        firstName: 'Walter2',
+        lastName:  'White2',
+    },
+    {
+        id:        'TEST_ID3',
+        avatar:    'TEST_AVATAR3',
+        firstName: 'Walter3',
+        lastName:  'White3',
+    }
+];
+
+const responseDataSuccess2 = {
+    data:    fillUsers,
+    message: successMesasge,
+};
+
 global.__ = {
     userProfile,
     users,
@@ -77,6 +103,7 @@ global.__ = {
     newName,
     newAvatar,
     newPassword,
+    responseDataSuccess2,
 };
 global.fetch = fetch;
 global.localStorage = new LocalStorage();
