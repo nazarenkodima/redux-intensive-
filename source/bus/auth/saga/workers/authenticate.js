@@ -34,7 +34,6 @@ export function* authenticate () {
     } finally {
         yield put(uiActions.stopFetching());
         yield put(authAction.initialize());
-
     }
 
 }
